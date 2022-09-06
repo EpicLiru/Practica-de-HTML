@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, th, td {
+            border: 1px solid blue
+        }
+        video {
+            max-width: 70%;
+        }
+    </style>
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Practica HTML</title>
+</head>
+<body>
+    <header>
+        <h1 id="Titulo">Practica de HTML</h1>
+        <p>Pondremos a prueba las distintas practicas obtenidas en HTML como son:
+            formularios, listas, tablas, etc. con la finalidad de reforzar el conocimiento, sin otro particular que hacer referencia,
+            ¡COMENCEMOS!
+        </p>
+    </header>
+    <hr>
+    <section>
+        <article class="post">
+            <h2>Primera Practica</h2>
+            <p>Realizar un formulario que contenga nombre, apellido y comentarios.</p>
+            <form action="/formulario" method="post">
+                <label for="Nombre">Nombre:</label>
+                <input id="Nombre" name="nombre" placeholder="Nombre">
+                <br><br>
+                <label for="Apellido">Apellido:</label>
+                <input id="Apellido" name="Apellido" placeholder="Apellido">
+                <br><br>   
+                <label for="Comentario">Comentario:</label> 
+                <br>
+                <textarea rows="10" cols="50" id="Comentario" name="Comentario" placeholder="Comentario.."></textarea>
+                <br> 
+                <button type="submit">Enviar</button>       
+            </form>
+        </article>
+        <hr>
+        <article class="post">
+            <h2>Segunda Practica</h2>
+            <p>Realizar una lista que contenga 3 elementos desordenados, luego ordenar los elemento y 3 sub-elementos, tambien realizar un formato de seleccion.</p>
+            <!--Lista Desordenada -->
+            <ul>
+                <li>Elemento 3</li>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+            </ul>
+            <!--Lista ordenada -->
+            <ol>
+                <li>Elemento 1</li>
+                <li>Elemento 2</li>
+                <li>Elemento 3</li>
+                <ol>
+                    <li style="list-style-type: lower-alpha;">Sub-elemento 1</li>
+                    <li style="list-style-type: lower-alpha;">Sub-elemento 2</li>
+                    <li style="list-style-type: lower-alpha;">Sub-elemento 3</li>
+                </ol>
+            </ol>
+            <div>Selecione un Elemento:</div>
+            <select>
+                <!--Para ordenar las opciones en clases se debe usar la etiqueta <optgroup> -->
+                    <option value="Elemento 1">Elemento 1</option>
+                    <option value="Elemento 2">Elemento 2</option>
+                    <option value="Elemento 3">Elemento 3</option>
+                </select>
+                <button type="button">Seleccion</button>
+        </article>
+        <hr>
+        <article class="post">
+            <h3>Tercera Practica</h3>
+            <p>Realizar una tabla que contenga el precio de un producto y el total de todos.</p>
+            <table style="width: 400px;">
+                <thead>
+                    <tr>
+                        <th>PRODUCTO</th>
+                        <th>PRECIO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>producto 1</td>
+                        <td>40$</td>
+                    </tr>
+                    <tr>
+                        <td>Producto 2</td>
+                        <td>40$</td>
+                    </tr>
+                    <tr>
+                        <td>Producto 3</td>
+                        <td>20$</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td>Total 100$</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </article>
+        <hr>
+        <article>
+            <h4>Cuarta Practica</h4>
+            <p>Abjuntar link referido, imagen, audio y video</p>
+            <figure>
+            <img src="ing/shawarma.jpg" width="340" height="200">
+            <figcaption style="color: red;">Shawarma</figcaption>
+            </figure>
+            <div>La Shawarma es un plato tipico Arabe muy delicioso. Mi favorito!</div>
+            <a target="_blank" href="https://www.youtube.com/watch?v=1URUlh20RfQ">Ir a youtube para aprender a preparar una Shawarma</a><br><br>
+            <video src="ing/pexels-mohammad-sadiq-padela-5528184.mp4" controls autoplay muted></video><br>
+            <audio src="ing/Kalimba.mp3" controls autoplay muted></audio>
+        </article>
+    </section>
+    <hr>
+    <footer>
+        <a href="#Titulo">Regresar al principio</a><br><br>
+        <div>Si te gusto mi trabajo, contacta conmigo, Saludos!</div>
+        <a href="mailto:RjohanF@gmail.com">Contactame aqui</a>
+    </footer>
+</body>
+</html>
